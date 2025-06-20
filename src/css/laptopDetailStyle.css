@@ -1,0 +1,98 @@
+/*************************************************************/
+/* Container della pagina di dettaglio */
+.container-detail {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 75%;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+/* Container del titolo, marca prezzo e addFav */
+.container-detail .title-container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Titolo */
+.title-container h2 {
+    font-size: 30px;
+    text-decoration: none;
+    color: #1976d2;
+}
+
+/* Contenitore addFav */
+.title-container .container-fav-icons {
+    cursor: pointer;
+    position: relative;
+}
+
+/* Icona fav */
+.title-container .detail-fav-icon {
+    margin-left: 10px;
+    position: absolute;
+    font-size: 30px;
+    top: -10px;
+}
+
+/* Regole prezzo */
+.title-container p {
+    background-color: rgb(255, 208, 0);
+    align-self: flex-end;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: bolder;
+    margin-top: -50px;
+}
+
+/*  */
+.container-detail button {
+    padding: 12px;
+}
+
+/*************************************************************/
+
+/*************************************************************/
+/* Container dei dettagli tecnici */
+.container-details {
+    margin-top: 50px;
+    padding: 20px 30px;
+    background-color: #f8f8f8;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    grid-column: 1 / -1;
+    /* si estende su entrambe le colonne */
+}
+
+/* Titolo della sezione */
+.container-details h4 {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+/* Lista dei dettagli in due colonne */
+.container-details ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 30px;
+}
+
+/* Singolo dettaglio */
+.container-details li {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* Testo in grassetto per le etichette */
+.container-details strong {
+    font-weight: 700;
+}
+
+/*************************************************************/

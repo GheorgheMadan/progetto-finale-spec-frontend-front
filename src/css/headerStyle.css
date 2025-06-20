@@ -1,0 +1,213 @@
+/**********************************************************/
+/* regole generale del header */
+header {
+    height: 100px;
+    background-color: rgb(80, 80, 80);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    color: white;
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.61);
+}
+
+/*  contenitore che stabilisce la width e la disposizione*/
+.container-header {
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* colore del titolo header */
+.container-header h1 a {
+    color: white;
+}
+
+/* hover per la scritta home */
+.container-header nav a:hover {
+    color: rgb(211, 211, 211);
+}
+
+/* active per il navlink */
+.active {
+    color: red;
+}
+
+/**********************************************************/
+
+/**********************************************************/
+/* Contenitore della navigazione */
+.container-nav {
+    display: flex;
+    gap: 10px;
+}
+
+/* transition generale per gli elementi del contenitore nav */
+.container-nav .search-icon,
+.container-nav .fav-icon,
+.container-nav .number-fav {
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+/* hover generale per gli elementi */
+.container-nav .search-icon:hover,
+.container-nav .fav-icon:hover,
+.container-nav .number-fav:hover {
+    transform: scale(1.2);
+}
+
+/* colore e size per il font */
+.container-header nav a {
+    color: white;
+    font-size: 1.1rem;
+}
+
+/* regole input */
+.container-nav input {
+    width: 250px;
+    background-color: rgb(56, 56, 56);
+    color: white;
+}
+
+/* regole select */
+.container-nav select {
+    background-color: rgba(117, 117, 117, 0.603);
+    color: white;
+}
+
+/* regole generali input select e button */
+.container-nav input,
+.container-nav select,
+.container-nav button {
+    border-radius: 10px;
+    padding: 6px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.container-nav button {
+    transition: transform 0.3s ease;
+}
+
+.container-nav button:hover {
+    transform: scale(1.1);
+}
+
+/* container icona lente di ricerca */
+.container-fav-icon {
+    position: relative;
+}
+
+/* icona lente di ricerca */
+.container-nav .search-icon {
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* icona preferiti cuore */
+.fav-icon {
+    color: rgb(168, 16, 16);
+    font-size: 24px;
+    margin-top: 1px;
+}
+
+/* numero che indica la quantità presente nei preferiti */
+.container-nav .number-fav {
+    color: white;
+    font-size: 11px;
+    background-color: rgba(0, 0, 0, 0.479);
+    padding: 3px 5px;
+    border-radius: 10px;
+    position: absolute;
+    top: -5px;
+    left: 13px;
+}
+
+
+/**********************************************************/
+/* Regole animazione del input */
+/* container del input */
+.container-nav .search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* regole del input */
+.search-input {
+    width: 0;
+    opacity: 0;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: white;
+    margin-right: 10px;
+    padding: 5px 10px;
+    transform-origin: left;
+    position: relative;
+}
+
+/* animazione */
+.animate-in {
+    animation: expandInput 0.4s forwards;
+}
+
+.animate-out {
+    animation: collapseInput 0.5s forwards;
+}
+
+@keyframes expandInput {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        width: 200px;
+        opacity: 1;
+    }
+}
+
+@keyframes collapseInput {
+    from {
+        width: 200px;
+        opacity: 1;
+    }
+
+    to {
+        width: 0;
+        opacity: 0;
+    }
+}
+
+/**************************************************/
+
+/**************************************************/
+/* animazione luce pulse */
+.pulsing {
+    animation: pulseRed 1.5s infinite;
+}
+
+@keyframes pulseRed {
+    0% {
+        background-color: white;
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+    }
+
+    70% {
+        background-color: white;
+        box-shadow: 0 0 10px 10px rgba(255, 0, 0, 0);
+    }
+
+    100% {
+        background-color: white;
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+    }
+}
+
+/**************************************************/

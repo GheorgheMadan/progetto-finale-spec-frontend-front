@@ -1,0 +1,129 @@
+/* Contenitore delle card */
+.container-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 20px 0px 30px;
+    align-items: center;
+    gap: 10px;
+}
+
+/**************************************************/
+
+/**************************************************/
+/********* laptop card *******/
+.container-list .laptop-card-without-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    padding: 20px 20px;
+    box-shadow: 0px 1px 1px 0px rgba(119, 118, 118, 0.5);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    width: 98%;
+    position: relative;
+}
+
+/* laptop card hover */
+.container-list .laptop-card-without-detail:hover {
+    transform: scale(1.05);
+}
+
+/* Immagine card */
+.container-list .laptop-card-without-detail img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+/* titolo card */
+.container-list .laptop-card-without-detail h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+/* icona add to fav */
+.container-list .fav-container {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.container-list .balance-icon,
+.green-balance {
+    border-radius: 14px;
+    padding: 3px 5px;
+    font-size: 17px;
+    position: absolute;
+    right: 25px;
+    top: 0px;
+}
+
+.container-list .white-balance {
+    background-color: rgb(241, 241, 241);
+}
+
+/* icona bilancia selezionata*/
+.container-list .green-balance {
+    background-color: green;
+    color: white;
+    border: none;
+}
+
+/* category card */
+.container-list .category-laptop {
+    font-size: 14px;
+}
+
+/* Prezzo card */
+.container-list .price-laptop-card {
+    font-size: 17px;
+    font-weight: 800;
+    margin-top: 5px;
+}
+
+/**************************************************/
+
+/**************************************************/
+/*** Intestazione pagina filtro e titolo ****/
+.container-filter {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.container-filter select {
+    padding: 8px;
+    border-radius: 10px;
+    background-color: rgb(231, 231, 231);
+    border: none;
+    font-size: 14px;
+}
+
+/**************************************************/
+
+/**************************************************/
+/* Allineamento in colonna unica per la modale di cambio */
+.new-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow-x: hidden;
+    height: 500px;
+}
+
+/* regole search bar presente nella modale di cambio */
+.search-bar-modal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+}
+
+/* regole search bar della modale di cambio */
+.search-bar-modal input {
+    background-color: rgb(231, 231, 231);
+    border-radius: 10px;
+}
+
+/**************************************************/
