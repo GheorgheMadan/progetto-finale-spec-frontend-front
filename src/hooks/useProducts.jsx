@@ -78,6 +78,9 @@ export default function useProducts() {
 
     // Funzione per il fetch del singolo laptop
     const fetchLaptopById = useCallback(async (id) => {
+
+        if (laptop && laptop.id === id) return laptop
+
         try {
             const response = await fetch(`${api}/laptops/${id}`)
             if (!response.ok) {

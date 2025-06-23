@@ -4,8 +4,7 @@ import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { memo } from "react";
 
-export default memo(function LaptopCardDetail({
-    laptop, addButton, openModalButton, containerDetails }) {
+export default memo(function LaptopCardDetail({ laptop, addButton, openModalButton, containerDetails }) {
 
     // Importo le funzioni necessarie per gestire i preferiti
     const { addToList, isAlready, favLaptops, setFavLaptops, setSelectedLaptops, removeFromList } = useGlobalContext();
