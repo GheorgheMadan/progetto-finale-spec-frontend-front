@@ -18,9 +18,9 @@ export default function FavPage() {
             <div className="container-filter">
                 <h1>Lista dei preferiti</h1>
             </div>
+            {favLaptops.length === 0 &&
+                <h1 className="msg-err">No favorite laptops added yet.</h1>}
             <div className="container-list">
-                {favLaptops.length === 0 &&
-                    <p>No favorite laptops added yet.</p>}
                 {/* Passo le props alla laptopCard */}
                 {favLaptops.map(laptop => {
                     const isAlreadyFav = isAlready(laptop, favLaptops)

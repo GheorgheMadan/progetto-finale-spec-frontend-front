@@ -24,7 +24,7 @@ export default memo(function LaptopsList({ newContainer, onSelectLaptop, onSelec
     }, [])
 
     // Stato per l'ordinamento
-    const [orderBy, setOrderBy] = useState('title')
+    const [orderBy, setOrderBy] = useState('')
     // Stato per la direzione dell'ordinamento
     const [direction, setDirection] = useState("1")
 
@@ -51,6 +51,7 @@ export default memo(function LaptopsList({ newContainer, onSelectLaptop, onSelec
             <div className="container-filter">
                 <span> Ordina per:</span>
                 <select value={orderBy} onChange={e => setOrderBy(e.target.value)}>
+                    <option value="">--filtra per--</option>
                     <option value="title">Titolo</option>
                     <option value="category">Categoria</option>
                 </select>
@@ -59,11 +60,11 @@ export default memo(function LaptopsList({ newContainer, onSelectLaptop, onSelec
                     <option value="-1">Z - A</option>
                 </select>
             </div>
+            {/* Se laptops è null */}
+            {!laptops && <h1 className="msg-err">Errore del server!</h1>}
+            {/* Se laptops è un array vuoto */}
+            {laptops && laptops.length === 0 && <h1 className="msg-err">Nessun laptop trovato!</h1>}
             <div className={`container-list ${newContainer}`} >
-                {/* Se laptops è null */}
-                {!laptops && <p>Errore del server!</p>}
-                {/* Se laptops è un array vuoto */}
-                {laptops && laptops.length === 0 && <p>Nessun laptop trovato!</p>}
                 {/* Mappo i laptop ordinati */}
                 {sortedLaptops?.map(laptop => {
                     const isAlreadyFav = isAlready(laptop, favLaptops)

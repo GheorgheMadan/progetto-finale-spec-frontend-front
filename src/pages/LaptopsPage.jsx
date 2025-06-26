@@ -6,7 +6,6 @@ export default function LaptopsPage() {
 
     // Importo le funzioni necessarie per gestire i preferiti
     const { handleSelectAndReplace, showChange } = useGlobalContext();
-
     return (
         <>
             <div>
