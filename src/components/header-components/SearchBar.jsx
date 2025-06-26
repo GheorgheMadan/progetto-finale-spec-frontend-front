@@ -23,7 +23,7 @@ export default function SearchBar() {
     const debouncedInput = useCallback(
         debounce((value) => {
             setSearch(value)
-        }, 1000),
+        }, 500),
         [])
 
     return (
